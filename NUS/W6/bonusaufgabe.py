@@ -13,8 +13,9 @@ R_5 = 11.7
 #Teilaufgabe 1
 
 # * Bei diesem Ansatz ist etwas falsch. Teilaufgabe 1 alternativ sollte stimmen
+# Warscheindlich ein Fehler in der Matrix
 
-GL = np.array([
+GLS = np.array([
 #   I, I1, I2, I3, I4, I5
     [-1, 1, 0, 0, 1, 0],
     [ 0, 1, 0, 1, 0, 1],
@@ -24,9 +25,9 @@ GL = np.array([
     [0, R_1, 0, 0, 0, R_5]
 ])
 
-B = [0, 0, 0, U_Q, U_Q, U_Q]
+B = [0, 0, 0, U_Q, 0, 0]
 
-x = np.linalg.solve(GL, B)
+x = np.linalg.solve(GLS, B)
 
 I_3 = x[4]
 
